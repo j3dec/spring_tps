@@ -6,6 +6,7 @@ public abstract class Operation {
 
     private String operation_date;
     private int op_amount;
+    private int global_amount = 0;
 
     public Operation(String operation_date, int op_amount) {
         this.operation_date = operation_date;
@@ -28,8 +29,16 @@ public abstract class Operation {
         this.op_amount = op_amount;
     }
 
+    public int getGlobal_amount() {
+        return global_amount;
+    }
+
+    public void setGlobal_amount(int global_amount) {
+        this.global_amount = global_amount;
+    }
+
     public String toString() {
-        return operation_date + " - " + op_amount;
+        return operation_date + " : " + op_amount;
     }
 
     public abstract String getType();
