@@ -2,10 +2,17 @@ package entites2;
 
 import entites.AdressePostale;
 
+import java.util.Locale;
+
 public class Personne {
     String nom;
     String prenom;
     AdressePostale adr;
+
+    public Personne(String nom, String prenom) {
+        this.nom = nom;
+        this.prenom = prenom;
+    }
 
     public Personne(String nom, String prenom, AdressePostale adr) {
         this.nom = nom;
@@ -38,8 +45,13 @@ public class Personne {
     }
 
     public String toString() {
-        return nom + " " + prenom;
+        return nom + " " + prenom + " " + adr;
     }
+
+    public String identityUpperCase() {
+        return nom.toUpperCase(Locale.ROOT) + " " + prenom.toUpperCase();
+    }
+
 }
 
 
