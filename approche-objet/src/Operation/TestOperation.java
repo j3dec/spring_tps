@@ -18,11 +18,11 @@ public class TestOperation {
         for (Operation operation : op_arr) {
             if (operation.getType() == "CREDIT") {
                 System.out.println(operation.getType());
-                global_amount += operation.op_amount;
+                global_amount += operation.getOp_amount();
             }
             if (operation.getType() == "DEBIT") {
                 System.out.println(operation.getType());
-                global_amount -= operation.op_amount;
+                global_amount -= operation.getOp_amount();
             }
 
             System.out.println(operation);
